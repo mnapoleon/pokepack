@@ -26,3 +26,22 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.example-section {
+	height: 285px;
+	width: 250px;
+}
+
+.cardGrid {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: row wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+
+}
