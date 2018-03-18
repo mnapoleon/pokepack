@@ -10,42 +10,38 @@ class Pokecard extends Component {
   constructor() {
     super()
     this.state = {
-      isFlipped: true,
-      imageCardSrc: '' 
+      isFlipped: true
     };
     this.handleClick = this.handleClick.bind(this)
   }
 
-  componentDidMount() {
-    this.reloadCard()
-  }
+  //componentDidMount() {
+  //  this.reloadCard()
+  //}
 
   handleClick(e) {
     e.preventDefault();
-    if (this.state.isFlipped) {
-      this.reloadCard()
-    }
     this.setState({
       isFlipped: !this.state.isFlipped
     });
   }
 
-  reloadCard() {
-    pokemon.card.where({ supertype: 'pokemon', set: 'Crimson Invasion' })
-      .then(cards => {
-        let size = cards.length
-        let ranNum = Math.floor(Math.random() * size)
-        this.setState ({imageCardSrc: cards[ranNum].imageUrl})
-        console.log(this.state)
-    })
-  }
+  // reloadCard() {
+  //   pokemon.card.where({ supertype: 'pokemon', set: 'Crimson Invasion' })
+  //     .then(cards => {
+  //       let size = cards.length
+  //       let ranNum = Math.floor(Math.random() * size)
+  //       this.setState ({imageCardSrc: cards[ranNum].imageUrl})
+  //       console.log(this.state)
+  //   })
+  // }
 
   render() {
     return (
         <div className="card">
           <ReactCardFlip isFlipped={this.state.isFlipped}>
             <div key="front">
-              <img src={this.state.imageCardSrc}
+              <img src={this.props.imageCardSrc}
               onClick={this.handleClick}>
               </img>
             </div>
