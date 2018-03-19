@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import GridList from 'material-ui/GridList';
+import GridList, { GridListTile } from 'material-ui/GridList';
 import Pokecard from './Pokecard';
 
 import './Pokepack.css';
@@ -34,9 +34,11 @@ class Pokepack extends Component {
     this.state.pack.map((card, index) => (console.log(card.imageUrl)))
     return (
       <div className="root">
-        <GridList className="gridlist">
+        <GridList className="gridlist" cols={5} cellHeight="auto">
           {this.state.pack.map((card, index) => (
-            <Pokecard imageCardSrc={card.imageUrl}/>
+            <GridListTile>
+              <Pokecard imageCardSrc={card.imageUrl}/>
+            </GridListTile>
           ))}
         </GridList>
       </div>

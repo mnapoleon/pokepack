@@ -42,13 +42,13 @@ class Pokecard extends Component {
           <ReactCardFlip isFlipped={this.state.isFlipped}>
             <div key="front">
               <img src={this.props.imageCardSrc}
-              onClick={this.handleClick}>
+              onClick={this.handleClick} height='275' width='196'>
               </img>
             </div>
 
             <div key="back">
               <img src='https://pre00.deviantart.net/cb44/th/pre/i/2016/259/5/a/pokemon_card_backside_in_high_resolution_by_atomicmonkeytcg-dah43cy.png' 
-                height='342' width='245'
+                height='275' width='196'
                 onClick={this.handleClick}>
               </img>
             </div>

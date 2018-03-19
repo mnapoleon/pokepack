@@ -1,8 +1,6 @@
 .card {
     flex-basis: calc(15% - 4rem);
-    padding: 2rem;
     flex-grow: 1;
-    margin: 0 2rem 2rem 2rem;
-    height: 250px;
-
+    margin: 0 1rem 2rem 1rem;
+    height: 275px;
 }
