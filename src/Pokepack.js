@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import GridList, { GridListTile } from 'material-ui/GridList';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 import Pokecard from './Pokecard';
 
 import './Pokepack.css';
