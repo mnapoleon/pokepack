@@ -55,7 +55,6 @@ class Pokepack extends Component {
   }
 
   componentDidMount() {
-    let pack = []
     let commons = []
     let uncommons = []
     let rare = []
@@ -95,7 +94,6 @@ class Pokepack extends Component {
   }
 
   render() {
-    this.state.pack.map((card, index) => (console.log(card.imageUrl)))
     return (
       <div className="root">
         <GridList className="gridlist" cols={2} cellHeight="auto">
@@ -114,16 +112,16 @@ class Pokepack extends Component {
         <GridList className="gridlist" cols={5} cellHeight="auto">
           {this.state.commons.map((card, index) => (
             <GridListTile>
-              <Pokecard imageCardSrc={card.imageUrl}/>
+              <Pokecard imageCardSrc={card.imageUrl} rarity="Common"/>
             </GridListTile>
           ))}
           {this.state.uncommons.map((card, index) => (
             <GridListTile>
-              <Pokecard imageCardSrc={card.imageUrl}/>
+              <Pokecard imageCardSrc={card.imageUrl} rarity="Uncommon"/>
             </GridListTile>
           ))}{this.state.rare.map((card, index) => (
             <GridListTile>
-              <Pokecard imageCardSrc={card.imageUrl}/>
+              <Pokecard imageCardSrc={card.imageUrl} rarity="Rare"/>
             </GridListTile>
           ))}
         </GridList>
