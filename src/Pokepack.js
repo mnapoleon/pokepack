@@ -18,7 +18,8 @@ class Pokepack extends Component {
     this.state = {
       commons: [],
       uncommons: [],
-      rare: []
+      rare: [],
+      selectedSet: 'Crimson Invasion'
     }
   }
 
@@ -58,7 +59,7 @@ class Pokepack extends Component {
     let commons = []
     let uncommons = []
     let rare = []
-    pokemon.card.where({ supertype: 'pokemon', set: 'Crimson Invasion', rarity: "Common" })
+    pokemon.card.where({ supertype: 'pokemon', set: this.state.selectedSet, rarity: "Common" })
       .then(cards => {
         let size = cards.length
         let i=0
@@ -69,7 +70,7 @@ class Pokepack extends Component {
         }
         this.setState({commons: commons})
     })
-    pokemon.card.where({ supertype: 'pokemon', set: 'Crimson Invasion', rarity: "Uncommon" })
+    pokemon.card.where({ supertype: 'pokemon', set: this.state.selectedSet, rarity: "Uncommon" })
       .then(cards => {
         let size = cards.length
         let i=0
@@ -80,7 +81,7 @@ class Pokepack extends Component {
         }
         this.setState({uncommons: uncommons})
     })
-    pokemon.card.where({ supertype: 'pokemon', set: 'Crimson Invasion', rarity: this.pickRareType()})
+    pokemon.card.where({ supertype: 'pokemon', set: this.state.selectedSet, rarity: this.pickRareType()})
     .then(cards => {
       let size = cards.length
       let i=0
@@ -102,9 +103,10 @@ class Pokepack extends Component {
             <Select
               labelId="set-name-label-id"
               id="set-name"
+              value={this.state.selectedSet}
             >
               <MenuItem value={"Sword and Shield"}>Sword and Shield</MenuItem>
-              <MenuItem value={"Cosmic Eclipse"}>Cosmic Eclipse</MenuItem>
+              <MenuItem value={"Crimson Invasion"}>Cosmic Eclipse</MenuItem>
               <MenuItem value={"Sun and Moon"}>Sun and Moon</MenuItem>
             </Select>
           </GridListTile>
