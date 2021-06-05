@@ -10,11 +10,13 @@ class App extends Component {
     return (
       <div>
         <table>
-          <tr>
-            <td>
-              <Setlist/>
-            </td>
-          </tr>
+          <tbody>
+            <tr>
+              <td>
+                <Setlist/>
+              </td>
+            </tr>
+          </tbody>
         </table>
         <Pokepack/>
       </div>
