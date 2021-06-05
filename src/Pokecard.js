@@ -53,6 +53,7 @@ class Pokecard extends Component {
               </img>
             </div>
           </ReactCardFlip>
+          <div><b>{this.props.rarity}</b></div>
         </div>
     );
   }
