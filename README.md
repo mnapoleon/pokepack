@@ -1,4 +1,4 @@
-![example workflow](https://github.com/github/docs/actions/workflows/nodejs.yml/badge.svg)
+![example workflow](https://github.com/mnapoleon/pokepack/actions/workflows/nodejs.yml/badge.svg)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
