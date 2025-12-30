@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.7",
     "bootstrap": "^4.3.1",
-    "pokemontcgsdk": "^1.1.0",
+    "pokemontcgsdk": "^2.0.0",
     "react": "^16.13.1",
     "react-card-flip": "^1.0.10",
     "react-dom": "^16.13.1",
